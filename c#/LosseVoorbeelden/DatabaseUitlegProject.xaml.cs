@@ -12,7 +12,7 @@ namespace _1819_12_Example_School
          * Controls scherm:
          * 1 DataGrid output -> dgStudents
          * 3 TextBox input-> txtFirstname, txtLastname, txtCourse
-         * 1 Button -> btnSave
+         * 2 Button -> btnSave, btnGet
          * 1 ComboBox -> cbLastname
          */
         dcSchoolDataContext db = new dcSchoolDataContext();
@@ -58,6 +58,19 @@ namespace _1819_12_Example_School
             txtLastname.Text = string.Empty;
             txtCourse.Text = string.Empty;
             MessageBox.Show("De nieuwe student " + myStudent.firstname + " " + myStudent.lastname + " is succesvol opgeslagen!");
+        }
+
+        private void btnGet_Click(object sender, RoutedEventArgs e)
+        {
+            // Controle of er iemand is geselecteerd in de ComboBox
+            if (cbLastname.SelectedItem != null)
+            {
+                // Student ophalen uit ComboBox
+                student myStudent = (student)cbLastname.SelectedItem;
+
+                // Data van de student laten zien in een MessageBox
+                MessageBox.Show("Student: "+myStudent.firstname+" "+myStudent.lastname+" volgt de cursus "+myStudent.course);
+            }
         }
     }
 }
