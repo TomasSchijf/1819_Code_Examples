@@ -50,5 +50,13 @@
             <td>Cel van tabel 3-3</td>
         </tr>
     </table>
+
+    <!-- SELECT -->
+    <select name="selGeslacht">
+        <option value="man">Man</option>
+        <option value="vrouw">Vrouw</option>
+        <option value="overig">Overig</option>
+    </select>
+    <!-- END SELECT -->
 </body>
 </html>
