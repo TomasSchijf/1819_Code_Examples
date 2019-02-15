@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ib1bdb" Class="DatabaseDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(local)\SQLEXPRESS;Initial Catalog=ib1bdb;Integrated Security=True" SettingsObjectName="WPFHER_IB1A.Properties.Settings" SettingsPropertyName="ib1bdbConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.klas" Member="klas">
+    <Type Name="kla">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="klasnaam" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="kla_student" Member="students" ThisKey="Id" OtherKey="klasId" Type="student" />
+    </Type>
+  </Table>
+  <Table Name="dbo.student" Member="students">
+    <Type Name="student">
+      <Column Name="studentnr" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="voornaam" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="achternaam" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="telefoon" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="klasId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="kla_student" Member="kla" ThisKey="klasId" OtherKey="Id" Type="kla" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

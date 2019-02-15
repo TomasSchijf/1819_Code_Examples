@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Database">
+  <DataContextMoniker Name="/DatabaseDataContext" />
+  <nestedChildShapes>
+    <classShape Id="852f0fa3-1f9a-4d6f-80c4-9f8aed3fe484" absoluteBounds="3.5, 3.375, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/DatabaseDataContext/kla" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fe5e8a3e-ed3a-4cbb-a2ac-d24bd9c927e4" absoluteBounds="3.515, 3.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fc553727-fbdd-4826-9eae-663f73e0c8c7" absoluteBounds="3.5, 0.75, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/DatabaseDataContext/student" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6842b9cd-b086-4b41-abea-99a0f8a9a3ad" absoluteBounds="3.515, 1.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.5 : 3.375); (4.5 : 2.52089680989583)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DatabaseDataContext/kla/kla_student" />
+      <nodes>
+        <classShapeMoniker Id="852f0fa3-1f9a-4d6f-80c4-9f8aed3fe484" />
+        <classShapeMoniker Id="fc553727-fbdd-4826-9eae-663f73e0c8c7" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
